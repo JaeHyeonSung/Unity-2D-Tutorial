@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class StudyComponent : MonoBehaviour
 {
-    public GameObject go;
+    public GameObject obj;
+
+    public string changeName;
+
+
     void Start()
     {
-        Debug.Log($"GameObject : {go}");
+        obj = GameObject.Find("Main Camera"); // Main Camera 오브젝트를 찾아서 할당하는 기능
+
+        obj.name = changeName;
     }
 
-    
 }
